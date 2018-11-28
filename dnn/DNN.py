@@ -38,8 +38,8 @@ model.summary()
 model.compile(loss = "categorical_crossentropy", optimizer = "sgd", metrics=["accuracy"])
 
 # 4) Model Learning
-import os
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+# import os
+# os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 res = model.fit(x = X_train, y = y_train, epochs = 100, batch_size = 500, validation_split = 0.1, verbose = 0)
 y_pred = model.predict(X_test)
